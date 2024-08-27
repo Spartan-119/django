@@ -1,12 +1,17 @@
+{% load static %}
 <html>
-    <head>
-        <title>Blog App</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1>Blog App</h1>
-            {% block content %}
-            {% endblock content %}
-        </div>
+<head>
+    <title>Django blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Django blog</a></h1>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
 </html>
